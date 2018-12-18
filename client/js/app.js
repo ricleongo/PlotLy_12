@@ -1,41 +1,43 @@
 function buildMetadata(sample) {
 
   d3.json(`/metadata/${sample}`).then((response) => {
-      d3.select("#metaAge").select("em").remove();
-      d3.select("#metaType").select("em").remove();
-      d3.select("#metaEthni").select("em").remove();
-      d3.select("#metaGender").select("em").remove();
-      d3.select("#metaLocation").select("em").remove();
-      d3.select("#metaFreq").select("em").remove();
-      d3.select("#metaSample").select("em").remove();
+    d3.select("#metaAge").select("em").remove();
+    d3.select("#metaType").select("em").remove();
+    d3.select("#metaEthni").select("em").remove();
+    d3.select("#metaGender").select("em").remove();
+    d3.select("#metaLocation").select("em").remove();
+    d3.select("#metaFreq").select("em").remove();
+    d3.select("#metaSample").select("em").remove();
 
-      d3.select("#metaAge")
-        .append("em")
-        .html(response.AGE)
+    d3.select("#metaAge")
+      .append("em")
+      .html(response.AGE)
 
-      d3.select("#metaType")
-        .append("em")
-        .html(response.BBTYPE);
+    d3.select("#metaType")
+      .append("em")
+      .html(response.BBTYPE);
 
-      d3.select("#metaEthni")
-        .append("em")
-        .html(response.ETHNICITY);
+    d3.select("#metaEthni")
+      .append("em")
+      .html(response.ETHNICITY);
 
-      d3.select("#metaGender")
-        .append("em")
-        .html(response.GENDER);
+    d3.select("#metaGender")
+      .append("em")
+      .html(response.GENDER);
 
-      d3.select("#metaLocation")
-        .append("em")
-        .html(response.LOCATION);
+    d3.select("#metaLocation")
+      .append("em")
+      .html(response.LOCATION);
 
-        d3.select("#metaFreq")
-        .append("em")
-        .html(response.WFREQ);
+      d3.select("#metaFreq")
+      .append("em")
+      .html(response.WFREQ);
 
-        d3.select("#metaSample")
-        .append("em")
-        .html(response.sample);
+      d3.select("#metaSample")
+      .append("em")
+      .html(response.sample);
+
+    buildGauge(response.WFREQ);
   });
 
   // @TODO: Complete the following function that builds the metadata panel
