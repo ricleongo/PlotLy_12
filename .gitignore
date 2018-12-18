@@ -102,3 +102,11 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+node_modules
+bower_components
+vendor
+package-lock.json
+*.min.css
+*.min.js
