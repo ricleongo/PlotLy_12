@@ -9,7 +9,7 @@
     "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
   },
   "scripts": {
-    "installrun": "npm i && bower install && gulp && python ../app.py",
+    "installrun": "npm i && bower install && gulp",
     "serverrun": "python ../app.py",
     "debug": "npm i && bower install && gulp dev && python ../app.py"
   },
