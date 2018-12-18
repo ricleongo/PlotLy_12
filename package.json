@@ -2,10 +2,10 @@
   "name": "plotly_12",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "engines": {
     "node": "10.x"
   },
+  "main": "/client/gulp.js",
   "scripts": {
     "start": "npm run installrun --prefix=client"
   },
